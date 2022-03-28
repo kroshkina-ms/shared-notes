@@ -293,7 +293,7 @@ cd /opt/intel/sgxsdk/SampleCode/SampleEnclave && make && ./app
 
 ```
 cd ~
-https://github.com/qzheng527/occlum.git
+git clone https://github.com/qzheng527/occlum.git
 cd occlum
 git checkout maa
 cd demos/remote_attestation/maa
