@@ -10,8 +10,8 @@ This section lists all steps that were taken to run the given demo.
 
 ## Prepare
 
-- [ ] Create Azure Confidential VM with Ubuntu 18.04 OS
-- [ ] `ssh` to the machine
+- Create Azure Confidential VM with Ubuntu 18.04 OS
+- `ssh` to the machine
 
 
 
@@ -21,8 +21,8 @@ This section lists all steps that were taken to run the given demo.
 
 [Quick Install Guide](https://software.intel.com/content/www/us/en/develop/articles/intel-software-guard-extensions-data-center-attestation-primitives-quick-install-guide.html) for the detailed installation procedure.
 
-- [x] Subscribe to the Intel PCS for ECDSA Attestation and obtain the required API keys. (https://api.portal.trustedservices.intel.com/developer)
-- [x] Set up Intel's reference caching service, the Provisioning Certification Caching Service (PCCS).
+- Subscribe to the Intel PCS for ECDSA Attestation and obtain the required API keys. (https://api.portal.trustedservices.intel.com/developer)
+- Set up Intel's reference caching service, the Provisioning Certification Caching Service (PCCS).
 ```
 sudo su
 curl -o setup.sh -sL https://deb.nodesource.com/setup_14.x
@@ -50,7 +50,7 @@ apt install -y cracklib-runtime
 
 ```
 
-- [ ] Remove `RANDFILE              = $ENV::HOME/.rnd` to avoid future **ERROR:** `Can't load /opt/intel/sgx-dcap-pccs/.rnd into RNG`
+- Remove `RANDFILE              = $ENV::HOME/.rnd` to avoid future **ERROR:** `Can't load /opt/intel/sgx-dcap-pccs/.rnd into RNG`
 
 ```
 vim /etc/ssl/openssl.cnf
@@ -271,7 +271,7 @@ docker pull occlum/occlum:0.26.4-ubuntu18.04
 
 See https://github.com/occlum/occlum#how-to-use
 
-- [ ] https://github.com/occlum/enable_rdfsbase
+- https://github.com/occlum/enable_rdfsbase
 
 ```
 git clone https://github.com/occlum/enable_rdfsbase.git
