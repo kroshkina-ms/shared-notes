@@ -220,7 +220,19 @@ sqlite> select * from fmspc_tcbs;
 sqlite> .quit
 ```
 
-### Runtime configuration
+## Run occulum demo
+
+```
+apt install -y docker.io
+
+```
+
+```
+docker pull occlum/occlum:0.26.4-ubuntu18.04
+
+```
+
+### Setup Runtime Configuration
 
 ```
 wget https://download.01.org/intel-sgx/sgx-dcap/1.9/linux/distro/ubuntu20.04-server/sgx_linux_x64_driver_1.36.2.bin
@@ -257,17 +269,7 @@ vim /etc/sgx_default_qcnl.conf
 
 ```
  
-## Run occulum demo
-
-```
-apt install -y docker.io
-
-```
-
-```
-docker pull occlum/occlum:0.26.4-ubuntu18.04
-
-```
+### Get and Run Occlum
 
 See https://github.com/occlum/occlum#how-to-use
 
@@ -300,7 +302,7 @@ cd demos/remote_attestation/maa
 ./run.sh
 ```
 
-### ERROR:
+### ERROR libocclum_dcap.so.0.1.0 - Fixed
 ```
 *** Build glibc maa demo ***
 make: Entering directory '/root/occlum/demos/remote_attestation/maa/gen_quote'
