@@ -17,9 +17,9 @@ This section lists all steps that were taken to run the given demo.
 
 ## Install Dependencies 
 
-### Setup Intel SGX enabled platform with DCAP installed. Follow [DCAP
+### Setup Intel SGX enabled platform with DCAP installed. 
 
-[Quick Install Guide](https://software.intel.com/content/www/us/en/develop/articles/intel-software-guard-extensions-data-center-attestation-primitives-quick-install-guide.html) for the detailed installation procedure.
+Follow [DCAP Quick Install Guide](https://software.intel.com/content/www/us/en/develop/articles/intel-software-guard-extensions-data-center-attestation-primitives-quick-install-guide.html) for the detailed installation procedure.
 
 - Subscribe to the Intel PCS for ECDSA Attestation and obtain the required API keys. (https://api.portal.trustedservices.intel.com/developer)
 - Set up Intel's reference caching service, the Provisioning Certification Caching Service (PCCS).
