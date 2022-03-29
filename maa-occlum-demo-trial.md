@@ -220,18 +220,6 @@ sqlite> select * from fmspc_tcbs;
 sqlite> .quit
 ```
 
-## Run occulum demo
-
-```
-apt install -y docker.io
-
-```
-
-```
-docker pull occlum/occlum:0.26.4-ubuntu18.04
-
-```
-
 ### Setup Runtime Configuration
 
 ```
@@ -269,6 +257,18 @@ vim /etc/sgx_default_qcnl.conf
 
 ```
  
+## Run occulum demo
+
+```
+apt install -y docker.io
+
+```
+
+```
+docker pull occlum/occlum:0.26.4-ubuntu18.04
+
+```
+
 ### Get and Run Occlum
 
 See https://github.com/occlum/occlum#how-to-use
@@ -285,7 +285,7 @@ make install
 
 For DCAP driver before v1.41:
 ```
-docker run -it --device /dev/sgx/enclave --device /dev/sgx/provision occlum/occlum:0.26.4-ubuntu18.04
+docker run -it --network host --device /dev/sgx/enclave --device /dev/sgx/provision occlum/occlum:0.26.4-ubuntu18.04
 ```    
 
 
