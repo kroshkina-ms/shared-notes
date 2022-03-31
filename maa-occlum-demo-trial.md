@@ -283,11 +283,6 @@ apt install -y docker.io
 
 ```
 
-```
-docker pull occlum/occlum:0.26.4-ubuntu18.04
-
-```
-
 ### Get and Run Occlum
 
 See https://github.com/occlum/occlum#how-to-use
@@ -304,12 +299,19 @@ make install
 
 For DCAP driver before v1.41:
 ```
-docker run -it --network host --device /dev/sgx/enclave --device /dev/sgx/provision occlum/occlum:0.26.4-ubuntu18.04
+docker run -it --network host --device /dev/sgx/enclave --device /dev/sgx/provision occlum/occlum:0.27.0-ubuntu20.04
 ```    
 
+- [x] Check that sgx works from the container 
 
 ```
 cd /opt/intel/sgxsdk/SampleCode/SampleEnclave && make && ./app
+```
+
+- [x] Check connection with PCCS
+
+```
+curl -v -k -G "https://localhost:8081/sgx/certification/v3/rootcacrl"
 ```
 
 ```
