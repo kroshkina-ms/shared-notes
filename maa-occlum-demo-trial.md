@@ -104,6 +104,15 @@ sqlite3 /opt/intel/sgx-dcap-pccs/pckcache.db
 
 ```
 
+Quick SQLite Commands:
+```
+select * from fmspc_tcbs;
+```
+```
+.quit
+```
+
+SQLite3 Output Example:
 ```
 sqlite> .tables
 crl_cache             pck_certchain         platform_tcbs
