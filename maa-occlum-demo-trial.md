@@ -58,6 +58,8 @@ vim /etc/ssl/openssl.cnf
 ```
 
 > Remove `RANDFILE              = $ENV::HOME/.rnd` line
+> OR update READFILE = /dev/urandom
+
 
 ```
 apt install -y sgx-dcap-pccs
