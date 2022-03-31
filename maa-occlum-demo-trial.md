@@ -50,7 +50,7 @@ apt install -y cracklib-runtime
 
 ```
 
-- Remove `RANDFILE              = $ENV::HOME/.rnd` to avoid future **ERROR:** `Can't load /opt/intel/sgx-dcap-pccs/.rnd into RNG`
+- Update `RANDFILE              = $ENV::HOME/.rnd` to avoid future **ERROR:** `Can't load /opt/intel/sgx-dcap-pccs/.rnd into RNG`
 
 ```
 vim /etc/ssl/openssl.cnf
@@ -215,6 +215,11 @@ Intel(R) Software Guard Extensions PCK Cert ID Retrieval Tool Version 1.12.101.1
 
 Warning: platform manifest is not available or current platform is not multi-package platform.
 the data has been sent to cache server successfully and pckid_retrieval.csv has been generated successfully!
+```
+
+> To verify that PCCS works run:
+```
+curl -v -k -G "https://localhost:8081/sgx/certification/v3/rootcacrl"
 ```
 
 ### Verify the provisioned system
