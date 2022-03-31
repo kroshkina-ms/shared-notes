@@ -92,6 +92,11 @@ apt install -y sgx-dcap-pccs
 
 > `Do you want to generate insecure HTTPS key and cert for PCCS service? [Y] (Y/N) :` <- Y
 
+> Check if pccs is up:
+```
+ systemctl status pccs.service
+```
+
 ### Verify the empty cache
 
 ```
