@@ -318,10 +318,27 @@ curl -v -k -G "https://localhost:8081/sgx/certification/v3/rootcacrl"
 cd ~
 git clone https://github.com/qzheng527/occlum.git
 cd occlum
-git checkout maa
+git checkout maa-update
 cd demos/remote_attestation/maa
 ./run.sh
 ```
+
+```
+echo "export RUST_BACKTRACE=1" >> ~/.bashrc && source ~/.bashrc
+```
+
+### ERROR thread '<unnamed>' panicked at 'IOCTRL IOCTL_GET_DCAP_QUOTE_SIZE failed', src/occlum_dcap.rs:70:13
+```
+...
+Built the Occlum image and enclave successfully
+occlum run to generate quote in maa json format
+[get_platform_quote_cert_data ../qe_logic.cpp:347] Error returned from the p_sgx_get_quote_config API. 0xe019
+thread '<unnamed>' panicked at 'IOCTRL IOCTL_GET_DCAP_QUOTE_SIZE failed', src/occlum_dcap.rs:70:13
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+fatal runtime error: failed to initiate panic, error 5
+```
+
+https://github.com/qzheng527/occlum/blob/maa-update/tools/toolchains/dcap_lib/src/occlum_dcap.rs#L70
 
 ### ERROR libocclum_dcap.so.0.1.0 - Fixed
 ```
