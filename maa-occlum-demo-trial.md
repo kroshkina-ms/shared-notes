@@ -340,6 +340,34 @@ fatal runtime error: failed to initiate panic, error 5
 
 https://github.com/qzheng527/occlum/blob/maa-update/tools/toolchains/dcap_lib/src/occlum_dcap.rs#L70
 
+Fixed by enabling `USE_SECURE_CERT=FALSE`
+ 
+ ```
+root@username-vm:~/occlum/demos/remote_attestation/maa# cat /etc/sgx_default_qcnl.conf
+# PCCS server address
+PCCS_URL=https://localhost:8081/sgx/certification/v3/
+
+# To accept insecure HTTPS certificate, set this option to FALSE
+USE_SECURE_CERT=FALSE
+
+# You can use Intel PCS to get quote verification collateral
+#COLLATERAL_SERVICE=https://api.trustedservices.intel.com/sgx/certification/v3/
+
+# If you use PCCS service to get quote verification collateral, you can specify which API version is to be used
+# The legacy 3.0 API will return CRLs in HEX encoded DER format, while the new 3.1 API will return raw DER format
+#PCCS_API_VERSION=3.1
+
+# Maximum retry times for QCNL. If RETRY is not defined or set to 0, no retry will be performed.
+# It will first wait one second and then for all forthcoming retries it will double the waiting time
+# By using RETRY_DELAY you disable this exponential backoff algorithm
+#RETRY_TIMES=6
+
+# Sleep this amount of seconds before each retry when a transfer has failed with a transient error
+#RETRY_DELAY=10
+```
+ 
+ 
+ 
 ### ERROR libocclum_dcap.so.0.1.0 - Fixed
 ```
 *** Build glibc maa demo ***
