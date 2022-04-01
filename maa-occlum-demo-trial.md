@@ -340,9 +340,6 @@ cd demos/remote_attestation/maa
 ./run.sh
 ```
 
-```
-echo "export RUST_BACKTRACE=1" >> ~/.bashrc && source ~/.bashrc
-```
 
 ### ERROR thread '<unnamed>' panicked at 'IOCTRL IOCTL_GET_DCAP_QUOTE_SIZE failed', src/occlum_dcap.rs:70:13
 ```
