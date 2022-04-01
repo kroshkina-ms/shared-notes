@@ -302,6 +302,23 @@ For DCAP driver before v1.41:
 docker run -it --network host --device /dev/sgx/enclave --device /dev/sgx/provision occlum/occlum:0.27.0-ubuntu20.04
 ```    
 
+
+```
+vim /etc/sgx_default_qcnl.conf
+
+```
+
+Content of `/etc/sgx_default_qcnl.conf`:
+
+```
+# PCCS server address
+PCCS_URL=https://localhost:8081/sgx/certification/v3/
+
+# To accept insecure HTTPS certificate, set this option to FALSE
+USE_SECURE_CERT=FALSE
+```
+
+
 - [x] Check that sgx works from the container 
 
 ```
